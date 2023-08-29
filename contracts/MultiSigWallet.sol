@@ -10,9 +10,6 @@ import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
     我们只需要继承BaseAccount，专注于实现自己的逻辑即可，主要是：
     1)_validateSignature() 和 entryPoint()
     2)其他业务逻辑，例如向其他账户发起转账或调用等
-
-
-
 */
 contract MultiSigWallet is BaseAccount{
     using ECDSA for bytes32;
