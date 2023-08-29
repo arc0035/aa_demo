@@ -6,10 +6,13 @@ import "@account-abstraction/contracts/interfaces/IEntryPoint.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 /**
-    BaseAccount里已经实现了validateUserOp的验证
-    我们只需要继承BaseAccount，专注于实现自己的逻辑即可，主要是：
-    1)_validateSignature() 和 entryPoint()
-    2)其他业务逻辑，例如向其他账户发起转账或调用等
+    1. 
+        yarn add @account-abstraction/contracts
+    2. 
+        BaseAccount里已经实现了validateUserOp的验证
+        我们只需要继承BaseAccount，专注于实现自己的逻辑即可，主要是：
+        1)_validateSignature() 和 entryPoint()
+        2)其他业务逻辑，例如向其他账户发起转账或调用等
 */
 contract MultiSigWallet is BaseAccount{
     using ECDSA for bytes32;
