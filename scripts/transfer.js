@@ -1,6 +1,6 @@
 const hre = require("hardhat");
 const ethers = hre.ethers;
-
+//target=0xff4F5Af43630c5fA6E31f7f892F65902eF327752  yarn hardhat run scripts/transfer.js
 async function main() {
     const target = process.env.target;
     if (!target){
